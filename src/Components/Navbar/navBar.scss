@@ -1,0 +1,73 @@
+@import '../../color.scss';
+
+.nav {
+    text-align: left;
+    width: 100%;
+    display: inline-block;
+    background: $color-light-navy;
+    color: $color-white;
+    text-align: left;
+    
+    a {
+      display: block;
+      padding: 0 16px;
+      line-height: inherit;
+      cursor: pointer;
+     
+    }
+
+    &__submenu {
+        display: none;
+    }
+
+    &_menu-item:hover {
+
+        .nav__submenu {
+            display: block;
+        }
+    }   
+    
+    ul {
+        list-style: none;
+        padding-left: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    &__menu {
+        line-height: 45px;
+        font-weight: 700;
+    }
+
+    &__menu-item {
+        display: inline-block;
+        position: relative;
+        color: $color-white;
+        
+        &:hover {
+            background-color: $color-white;
+            color: $color-dark-blue;
+        
+            .nav__submenu {
+            display: block;
+            }
+        }
+    }
+
+    &__submenu {
+        font-weight: 300;
+        text-transform: none;
+        display: none;
+        position: absolute;
+        width: 180px;
+        background-color: #fff;
+        border: 1px solid $color-light-navy;
+        border-top: none;
+    }
+
+    &__submenu-item {
+        &:hover {
+          background: $menu-selection-color;
+        }
+    }    
+}

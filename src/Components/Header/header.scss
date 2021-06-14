@@ -1,0 +1,13 @@
+@import '../../color.scss';
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+
+    &__wrapper {
+        background-color: $color-dark-navy;
+        height: 80px;
+    }
+}
